@@ -1,11 +1,12 @@
 import os
 import datetime
 import git
-import datetime
+
 
 def main():
     # 設定專案目錄
-    repo_dir = '/path/to/your/repository'
+    #repo_dir = '/path/to/your/repository'
+    repo_dir = 'C:\Users\yuyu\Desktop\githubRepo\leetcodeMedium'
     repo = git.Repo(repo_dir)
 
     # 確認是否有變更

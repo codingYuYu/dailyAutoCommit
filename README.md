@@ -7,7 +7,7 @@ Follow the step：
 
 1. clone this Repo：
     ```sh
-    https://github.com/codingYuYu/dailyAutoCommit.git
+    git clone https://github.com/codingYuYu/dailyAutoCommit.git
     ```
 2. install gitpython
    ```sh
@@ -39,7 +39,7 @@ Follow the step：
    4. For the Action, select "Start a program".
    5. 
    ```sh
-   C:\Path\To\python.exe C:\Path\To\your\script.py
+   C:\Path\To\python.exe C:\Path\To\your\dailyAutoCommit.py
 
    ```
 ---------------------------------------------------------------------------
