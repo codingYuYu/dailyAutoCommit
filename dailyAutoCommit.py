@@ -36,10 +36,23 @@ def main():
     #github_token = os.getenv('GITHUB_TOKEN')  # 從環境變量中獲取個人訪問令牌
     #os.system(f'git push -uf https://{github_token}@github.com/codingYuYu/leetcodeMedium.git main')
     # 使用SSH URL進行推送
-    github_ssh_url = "git@github.com:codingYuYu/autoCommitTest.git"
+    #github_ssh_url = "git@github.com:codingYuYu/autoCommitTest.git"
 
     # 使用 git push -uf origin main 進行推送
-    os.system(f'git push -uf {github_ssh_url} main')
+    #os.system(f'git push -uf {github_ssh_url} main')
+
+    # 使用 subprocess 進行推送
+    push_command = ['git', 'push', '-uf', 'origin', 'main']
+    print(f"Running command: {' '.join(push_command)}")
+
+    result = subprocess.run(push_command, cwd=repo_dir, capture_output=True, text=True)
+    # 檢查推送結果
+    if result.returncode != 0:
+        print("Failed to push changes to the remote repository.")
+        print(f"Error: {result.stderr}")
+    else:
+        print("Successfully pushed changes to the remote repository.")
+        print(result.stdout)
 
 
 if __name__ == "__main__":
