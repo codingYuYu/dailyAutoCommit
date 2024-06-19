@@ -7,7 +7,7 @@ import git
 def main():
     # 設定專案目錄
     #repo_dir = '/path/to/your/repository'
-    repo_dir = r'C:\Users\yuyu\Desktop\githubRepo\dailyAutoCommit'
+    repo_dir = r'C:\Users\yuyu\Desktop\githubRepo\autoCommitTest'
 
     # 將當前工作目錄更改為repo_dir
     os.chdir(repo_dir)
